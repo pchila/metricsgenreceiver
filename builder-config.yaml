@@ -30,3 +30,8 @@ receivers:
 extensions:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension v0.139.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension v0.139.0
+
+replaces:
+  # a list of "replaces" directives that will be part of the resulting go.mod
+  - github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter => github.com/pchila/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter 0.139.0-prw-sending-queue-hotpatch
+
